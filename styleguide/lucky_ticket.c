@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() 
+int main(void) 
 {
     int count = 0;
     int sums[28] = {0}; 
@@ -16,6 +16,7 @@ int main()
         }
     }
 
+    
     for (int i = 0; i <= 27; i++) 
     {
         count += sums[i] * sums[i];
