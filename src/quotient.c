@@ -1,47 +1,35 @@
+#include <stdlib.h>
 #include <stdio.h>
 
-
-int get_quotient(int a, int b) 
+int GetQuotient(int a, int b) 
 {
-    if (b == 0) 
-    {
-        
-        printf("Ошибка: деление на ноль.\n");
-        return 1;
-    }
+  int sign = 1;
+  if (a * b < 0) 
+  {
+  sign = -1;
+  }
 
-    int sign = 1;
-    if ((a < 0 && b > 0) || (a > 0 && b < 0)) 
-    {
-        sign = -1;
-    }
+  int absA = abs(a);
+  int absB = abs(b);
 
-    
-    unsigned int abs_a = (a < 0) ? -a : a;
-    unsigned int abs_b = (b < 0) ? -b : b;
+  int quotient = 0;
 
-    int quotient = 0;
-    
-    while (abs_a >= abs_b) 
-    {
-        abs_a = abs_a - abs_b;
-        quotient++;
-    }
+  while (absA >= absB) 
+  {
+    absA = absA - absB;
+    quotient++;
+  }
 
-    return quotient * sign;
+  return quotient * sign;
 }
 
 int main() 
 {
-    int num1, num2;
+  int num1 = 10;
+  int num2 = 3;
+  int result = GetQuotient(num1, num2);
+  printf("Неполное частное от деления %d на %d равно: %d\n", num1, num2, result);
 
-    printf("Введите делимое (a): ");
-    scanf("%d", &num1);
-    printf("Введите делитель (b): ");
-    scanf("%d", &num2);
-
-    int result = get_quotient(num1, num2);
-    printf("Неполное частное от деления %d на %d равно: %d\n", num1, num2, result);
-
-    return 0;
+  return 0;
 }
+
