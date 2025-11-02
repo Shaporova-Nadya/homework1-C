@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "listtt.h"
+#include "list.h"
 
 int main(void) {
     Node *head = NULL;
