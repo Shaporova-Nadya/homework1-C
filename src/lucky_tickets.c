@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int
-main(void)
+int main(void)
 {
     int count = 0;
     int sums[28] = { 0 };
