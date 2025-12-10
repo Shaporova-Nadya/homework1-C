@@ -1,8 +1,7 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-int
-GetQuotient(int a, int b)
+int GetQuotient(int a, int b)
 {
     int sign = 1;
 
@@ -23,8 +22,7 @@ GetQuotient(int a, int b)
     return quotient * sign;
 }
 
-int
-main(void)
+int main(void)
 {
     int num1 = 10;
     int num2 = 3;
@@ -35,5 +33,3 @@ main(void)
 
     return 0;
 }
-
-
