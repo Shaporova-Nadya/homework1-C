@@ -1,35 +1,39 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int GetQuotient(int a, int b) 
+int
+GetQuotient(int a, int b)
 {
-  int sign = 1;
-  if (a * b < 0) 
-  {
-  sign = -1;
-  }
+    int sign = 1;
 
-  int absA = abs(a);
-  int absB = abs(b);
+    if (a * b < 0) {
+        sign = -1;
+    }
 
-  int quotient = 0;
+    int absA = abs(a);
+    int absB = abs(b);
 
-  while (absA >= absB) 
-  {
-    absA = absA - absB;
-    quotient++;
-  }
+    int quotient = 0;
 
-  return quotient * sign;
+    while (absA >= absB) {
+        absA = absA - absB;
+        quotient++;
+    }
+
+    return quotient * sign;
 }
 
-int main() 
+int
+main(void)
 {
-  int num1 = 10;
-  int num2 = 3;
-  int result = GetQuotient(num1, num2);
-  printf("Неполное частное от деления %d на %d равно: %d\n", num1, num2, result);
+    int num1 = 10;
+    int num2 = 3;
+    int result = GetQuotient(num1, num2);
 
-  return 0;
+    printf("Неполное частное от деления %d на %d равно: %d\n", num1, num2,
+        result);
+
+    return 0;
 }
+
 
