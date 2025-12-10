@@ -6,8 +6,6 @@ int main(void) {
     Node *head = NULL;
     int choice, val;
 
-    printf("Программа для управления сортированным односвязным списком.\n");
-
     while (1) {
         printf("\nВыберите действие:\n");
         printf("1 – добавить значение\n");
