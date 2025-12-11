@@ -41,19 +41,19 @@ int main() {
 
     printf("\nРезультат:\n");
 
-    int current_num;
-    int current_count;
+    int currentNum;
+    int currentCount;
 
     for (int i = 0; i < count; i++) {
-        current_num = numbers[i];
-        current_count = 1;
+        currentNum = numbers[i];
+        currentCount = 1;
 
-        while (i + 1 < count && numbers[i + 1] == current_num) {
-            current_count++;
+        while (i + 1 < count && numbers[i + 1] == currentNum) {
+            currentCount++;
             i++;
         }
 
-        printf("%d: %d раз(а)\n", current_num, current_count);
+        printf("%d: %d раз(а)\n", currentNum, currentCount);
     }
     free(numbers);
 
