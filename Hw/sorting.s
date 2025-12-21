@@ -38,6 +38,7 @@ main:
 	movq	%fs:40, %rax
 	movq	%rax, 440(%rsp)
 	xorl	%eax, %eax
+	movl	$0, 28(%rsp)
 	leaq	28(%rsp), %rbp
 	.p2align 4,,10
 	.p2align 3
