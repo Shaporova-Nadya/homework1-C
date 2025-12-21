@@ -1,18 +1,24 @@
-#include "sorting.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-int CompareFunc(const void *a, const void *b) 
+int asmSort(int* array, int n)
 {
-  int ia = *((int *)a);
-  int ib = *((int *)b);
-  if (ia < ib)
-  {
-    return -1;
-  }
-  if (ia > ib)
-  {
-    return 1;
-  }
-  return 0;
+    int movedCount = 0;
+    for (int i = 1; i < n; i++) {
+        int key = array[i];
+        int j = i - 1;
+        int changed = 0;
+
+        while (j >= 0 && array[j] > key) {
+            array[j + 1] = array[j];
+            j = j - 1;
+            changed = 1;
+        }
+        array[j + 1] = key;
+        movedCount += changed;
+    }
+    return movedCount;
 }
+
+
+
