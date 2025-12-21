@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "lucky_tickets.h"
 
-int main(void)
+int lucky(void)
 {
     int count = 0;
     int sums[28] = { 0 };
@@ -17,7 +18,4 @@ int main(void)
         count += sums[i] * sums[i];
     }
 
-    printf("Общее количество счастливых билетов: %d\n", count);
-
-    return 0;
 }
