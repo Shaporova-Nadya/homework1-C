@@ -1,16 +1,19 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "Lib.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int main(void) {
-    int num1, num2; 
-    
+int main(void)
+{
+    int num1, num2;
+
     printf("Введите первое число: ");
-    if (scanf("%d", &num1) != 1) return 1; 
-    
+    if (scanf("%d", &num1) != 1)
+        return 1;
+
     printf("Введите второе число: ");
-    if (scanf("%d", &num2) != 1) return 1; 
+    if (scanf("%d", &num2) != 1)
+        return 1;
 
     printf("\n--- Результат сложения ---\n");
     BinarySum(num1, num2);
