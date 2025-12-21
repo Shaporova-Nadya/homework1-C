@@ -1,28 +1,26 @@
-#include <stdio.h>
-#include <stdbool.h>
-#include <math.h>
 #include "Double.h"
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
 
 void testPrintDouble()
 {
-    return printDouble(-2.5);
+    printDouble(-2.5);
 }
 
 void testPrintDouble2()
 {
-    return printDouble(12312.323)
+    printDouble(12312.323);
 }
 
-int main() {
+int main()
+{
     double num;
     printf("Enter a number: ");
-    
     if (scanf("%lf", &num) != 1) {
         printf("Invalid input.\n");
         return 1;
     }
-
     printDouble(num);
-
     return 0;
 }
