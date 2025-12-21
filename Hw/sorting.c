@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 int asmSort(int* array, int n)
 {
     int movedCount = 0;
