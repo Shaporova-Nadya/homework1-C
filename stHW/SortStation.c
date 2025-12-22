@@ -1,5 +1,5 @@
 #include "SortStation.h"
-#include "Stack.h"
+#include "stackHW/Stack.h"
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -26,7 +26,7 @@ char peek(Stack* stack)
 
 char* InfixToPostfix(char* string)
 {
-    Stack stack = newStack();
+    Stack stack = new();
     if (string == NULL)
         return NULL;
 

@@ -1,4 +1,5 @@
 #pragma once
+#include "stackHW/Stack.h"
 
 //Function that determines the operator's priority
 int getPrecedence(char op);

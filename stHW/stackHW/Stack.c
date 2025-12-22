@@ -1,14 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "Stack.h"
-
-typedef struct StackNode{
-    char value;
-    struct StackNode* next;
-}Node;
-
-typedef struct Stack {
-    struct StackNode* head;
-}Stack;
 
 //Function that creates stack
 Stack new(void) { 

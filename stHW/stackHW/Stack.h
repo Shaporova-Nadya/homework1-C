@@ -11,13 +11,13 @@ typedef struct Stack {
 }Stack;
 
 //Function that creates stack
-Stack new(void) 
+Stack new(void);
     
 //Function for checking the stack for emptiness
-int isEmpty(Stack* stack) 
+int isEmpty(Stack* stack);
 
 //Function for pushing elements to stack
-void push(Stack* stack, char value) 
+void push(Stack* stack, char value); 
 
 //This function pops elements from stack
-char pop(Stack* stack) 
+char pop(Stack* stack);

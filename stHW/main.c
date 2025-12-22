@@ -1,5 +1,5 @@
 #include "SortStation.h"
-#include "Stack.h"
+#include "stackHW/Stack.h"
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
