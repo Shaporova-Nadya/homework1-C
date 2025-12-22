@@ -6,4 +6,10 @@ add_library(station SortStation.c)
 add_library(stack Stack.c)
 target_link_libraries(stack PUBLIC station)
 add_executable(main main.c SortStation.c)
+target_compile_options(main 
+PRIVATE 
+  -Wall
+  -Wextra
+  -Wpedantic
+)
 target_link_libraries(main PRIVATE station)
